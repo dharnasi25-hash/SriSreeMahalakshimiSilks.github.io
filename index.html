@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sri Sree Mahalakshmi Silks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= GLOBAL ================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    padding: 18px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+nav a {
+    color:black;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f4c430;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #f4c430;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    min-height: 100vh;
+    padding: 100px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= HOME ================= */
+#home {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
+    url("");
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 8%;
+}
+
+.hero-box {
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    max-width: 700px;
+    animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-box h1 {
+    font-size: 80px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.hero-box .subtitle {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.badge-pill {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: white;
+    color: green;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+.hero-btn.secondary:hover {
+    background: white;
+    color: green;
+}
+
+/* ================= ABOUT ================= */
+#about {
+    background: linear-gradient(135deg, #fff8f0, #fef5e7);
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-content h2 {
+    color: green;
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.stat-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat-box h3 {
+    font-size: 36px;
+    color: green;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= STORE ================= */
+#store {
+    background: linear-gradient(to bottom, #fefdfb, #f9f6f1);
+    padding: 100px 50px;
+}
+
+.store-wrapper {
+    max-width: 1300px;
+    width: 100%;
+}
+
+.store-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.store-header h2 {
+    color: #8b4513;
+    font-size: 44px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.store-header p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 17px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(139, 69, 19, 0.25);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: green;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color:green;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.price {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content em {
+    font-size: 14px;
+    color: #777;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: green;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+    background:GREEN;
+    transform: translateX(5px);
+}
+
+/* ================= COLLECTIONS ================= */
+#collections {
+    background: linear-gradient(rgba(139, 69, 19, 0.85), rgba(0,0,0,0.6)),
+    url("NAME/image.png") center/cover no-repeat fixed;
+    color: white;
+}
+
+.collections-wrapper {
+    max-width: 1200px;
+    text-align: center;
+}
+
+.collections-wrapper h2 {
+    font-size: 44px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #f4c430;
+}
+
+.collections-wrapper > p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.collection-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.collection-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-8px);
+}
+
+.collection-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f4c430;
+}
+
+.collection-item p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ================= WHY CHOOSE US ================= */
+#why-us {
+    background:#F6E4CC ;
+    padding: 100px 50px;
+}
+
+.why-wrapper {
+    max-width: 1200px;
+}
+
+.why-wrapper h2 {
+    text-align: center;
+    color: #8b4513;
+    font-size: 44px;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 35px;
+    background: linear-gradient(135deg, #fff8f0, #fef5e7);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    color: #8b4513;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ================= CONTACT ================= */
+#contact {
+    background: linear-gradient(135deg, #8b4513, #6d3710);
+    color: white;
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 700px;
+}
+
+.contact-box h2 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-box p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.contact-info strong {
+    color: #f4c430;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 50px;
+    background: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background:GREEN;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+.footer-text {
+    margin-top: 50px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    section {
+        padding: 80px 30px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 13px;
+    }
+    
+    #home {
+        padding-left: 30px;
+        padding-right: 30px;
+        align-items: center;
+    }
+    
+    .hero-box h1 {
+        font-size: 48px;
+    }
+    
+    .hero-box .subtitle {
+        font-size: 16px;
+    }
+    
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .store-header h2,
+    .collections-wrapper h2,
+    .why-wrapper h2,
+    .contact-box h2 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#store">Store</a>
+    <a href="#collections">Collections</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="hero-box">
+        <h1>Sri Sree<br>Mahalakshmi Silks</h1>
+        <p class="subtitle">
+            Where tradition meets timeless elegance.<br>
+            Discover handcrafted sarees that celebrate the rich<br>
+            heritage of Indian craftsmanship.
+        </p>
+        
+        <div class="hero-badges">
+            <span class="badge-pill">✨ Authentic Handwoven</span>
+            <span class="badge-pill">🇮🇳 Made in India</span>
+            <span class="badge-pill">💎 Premium Quality</span>
+        </div>
+        
+        <div class="hero-buttons">
+            <a href="#store" class="hero-btn">Explore Collection</a>
+            <a href="#contact" class="hero-btn secondary">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-wrapper">
+        <div class="about-content">
+            <h2>Our Heritage, Your Elegance</h2>
+            <p>
+                Elegant Sarees was founded with a vision to preserve and celebrate the timeless beauty of traditional Indian sarees. Each piece in our collection tells a story of skilled artisanship, cultural heritage, and unmatched elegance.
+            </p>
+            <p>
+                We collaborate directly with master weavers and artisans across India, ensuring authenticity, premium quality, and fair trade practices. From the silk looms of Kanchipuram to the intricate Banarasi designs, every saree is a masterpiece.
+            </p>
+            
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h3>50+</h3>
+                    <p>Unique Designs</p>
+                </div>
+                <div class="stat-box">
+                    <h3>30+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Authentic Quality</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image">
+            <img src="images/unnamed.jpg" alt="Traditional Saree Weaving">
+        </div>
+    </div>
+</section>
+
+<!-- STORE -->
+<section id="store">
+    <div class="store-wrapper">
+        <div class="store-header">
+            <h2>Our Handpicked Collection</h2>
+            <p>
+                Each saree is meticulously selected for its craftsmanship, fabric quality, and timeless elegance. Designed to make every woman feel confident, graceful, and beautiful.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/Gemini_Generated_Image_mrghamrghamrgham.png" alt="Kanchipuram Silk Saree">
+                    <span class="badge">Premium</span>
+                </div>
+                <div class="card-content">
+                    <h3>Kanchipuram Silk Saree</h3>
+                    <div class="price">₹8,999</div>
+                    <em>Pure silk with rich gold zari work and traditional temple border</em>
+                    <a href="https://wa.me/917032724204?text=Hello%2C%20I%20m%20interested%20in%20your%20saree%20collection" class="card-btn">Inquire Now →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/MBS1002GREEN-10.jpg" alt="Banarasi Saree">
+                    <span class="badge">Bestseller</span>
+                </div>
+                <div class="card-content">
+                    <h3>Banarasi Silk Saree</h3>
+                    <div class="price">₹6,499</div>
+                    <em>Handwoven with traditional Mughal motifs and royal finish</em>
+                    <a href="https://wa.me/917032724204?text=Hello%2C%20I%20m%20interested%20in%20your%20saree%20collection" class="card-btn">Inquire Now →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/Gemini_Generated_Image_7jo84k7jo84k7jo8.png" alt="Soft Silk Saree">
+                    <span class="badge">New</span>
+                </div>
+                <div class="card-content">
+                    <h3>Soft Silk Saree</h3>
+                    <div class="price">₹4,299</div>
+                    <em>Lightweight and elegant drape, perfect for any occasion</em>
+                    <a href="https://wa.me/917032724204?text=Hello%2C%20I%20m%20interested%20in%20your%20saree%20collection" class="card-btn">Inquire Now →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/Gemini_Generated_Image_a38xhta38xhta38x.png" alt="Tussar Silk Saree">
+                </div>
+                <div class="card-content">
+                    <h3>Tussar Silk Saree</h3>
+                    <div class="price">₹5,799</div>
+                    <em>Natural texture with hand-painted tribal art and earthy tones</em>
+                    <a href="https://wa.me/917032724204?text=Hello%2C%20I%20m%20interested%20in%20your%20saree%20collection" class="card-btn">Inquire Now →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/WhatsApp-Image-2022-02-04-at-7.51.35-PM.jpeg" alt="Chanderi Saree">
+                </div>
+                <div class="card-content">
+                    <h3>Chanderi Cotton Saree</h3>
+                    <div class="price">₹3,499</div>
+                    <em>Sheer elegance with traditional butis and lightweight comfort</em>
+                    <a href="https://wa.me/917032724204?text=Hello%2C%20I%20m%20interested%20in%20your%20saree%20collection" class="card-btn">Inquire Now →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/fv.jpg" alt="Patola Saree">
+                    <span class="badge">Exclusive</span>
+                </div>
+                <div class="card-content">
+                    <h3>Patola Silk Saree</h3>
+                    <div class="price">₹12,999</div>
+                    <em>Double ikat weave with geometric precision and vibrant colors</em>
+                    <a href="https://wa.me/917032724204?text=Hello%2C%20I%20m%20interested%20in%20your%20saree%20collection" class="card-btn">Inquire Now →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections">
+    <div class="collections-wrapper">
+        <h2>Signature Collections</h2>
+        <p>
+            From grand weddings to intimate celebrations, our curated collections are designed for every special moment in your life. Each collection embodies elegance, tradition, and contemporary style.
+        </p>
+
+        <div class="collection-grid">
+            <div class="collection-item">
+                <h3>Bridal Collection</h3>
+                <p>Opulent sarees adorned with intricate zari work, perfect for your special day. Featuring traditional Kanchipuram and Banarasi designs.</p>
+            </div>
+            
+            <div class="collection-item">
+                <h3>Festive Collection</h3>
+                <p>Celebrate festivals in style with vibrant colors and rich fabrics. From Diwali to Durga Puja, shine bright in our festive range.</p>
+            </div>
+            
+            <div class="collection-item">
+                <h3>Party Wear</h3>
+                <p>Contemporary designs with modern draping styles. Elegant, sophisticated, and perfect for evening gatherings and celebrations.</p>
+            </div>
+            
+            <div class="collection-item">
+                <h3>Everyday Elegance</h3>
+                <p>Comfortable cotton and soft silk sarees for daily wear. Grace and comfort combined for the modern woman.</p>
+            </div>
+        </div>
+        
+        <p style="margin-top: 50px; font-style: italic; font-size: 20px;">
+            "Elegance begins when tradition meets perfection."
+        </p>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why-us">
+    <div class="why-wrapper">
+        <h2>Why Choose Elegant Sarees?</h2>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">✨</div>
+                <h3>Authentic Quality</h3>
+                <p>Every saree is sourced directly from master artisans, ensuring 100% authenticity and traditional craftsmanship.</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">🤝</div>
+                <h3>Fair Trade</h3>
+                <p>We believe in empowering artisans. Our fair trade practices ensure weavers receive fair compensation for their art.</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">💎</div>
+                <h3>Premium Fabrics</h3>
+                <p>From pure silk to fine cotton, we use only the finest materials that drape beautifully and last for generations.</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">🎨</div>
+                <h3>Timeless Designs</h3>
+                <p>Curated collections that blend traditional motifs with contemporary aesthetics, perfect for the modern Indian woman.</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">📦</div>
+                <h3>Secure Packaging</h3>
+                <p>Each saree is carefully packaged to preserve its beauty and arrives at your doorstep in perfect condition.</p>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">💬</div>
+                <h3>Personal Service</h3>
+                <p>Direct communication via WhatsApp ensures you get personalized attention and quick responses to all your queries.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="contact-box">
+        <h2>Let's Connect</h2>
+        <p>
+            Experience the elegance of tradition with personalized service. Order directly through WhatsApp for a seamless shopping experience.
+        </p>
+
+        <div class="contact-info">
+            <p><strong>📍 Location:</strong> Guntur, Andhra Pradesh, India</p>
+            <p><strong>⏰ Available:</strong> 10 AM - 8 PM (All Days)</p>
+            <p>
+                <strong>✉️ Email:</strong>
+                <a href="mailto:dharnasi25@gmail.com?subject=Saree%20Inquiry&body=Hello%20Sri%20Sree%20Mahalakshmi%20Silks,%0A%0AI%20am%20interested%20in%20your%20saree%20collection.%20Please%20share%20details."
+                    style="color:white; text-decoration:none;">
+                    dharnasi25@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+        <p style="font-style: italic; margin: 30px 0;">
+            "Trust is woven into every thread we sell."
+        </p>
+
+        <a href="https://wa.me/7032724204?text=Hello%2C%20I'm%20interested%20in%20your%20saree%20collection" class="whatsapp-btn">💬 Order on WhatsApp</a>
+
+        <p class="footer-text">
+            © 2025 sri Sree Mahalakshmi silks • With Tradition & care
+            <br>
+            Preserving Heritage, One Saree at a Time
+        </p>
+    </div>
+</section>
+
+</body>
+</html>
